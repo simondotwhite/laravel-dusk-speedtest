@@ -1,0 +1,32 @@
+[
+    {
+        "level": "WARNING",
+        "message": "https:\/\/cdn.adsafeprotected.com\/sca.17.2.2.js 18 Use of the Application Cache is deprecated on insecure origins. Support will be removed in the future. You should consider switching your application to a secure origin, such as HTTPS. See https:\/\/goo.gl\/rStTGz for more details.",
+        "source": "deprecation",
+        "timestamp": 1490451224126
+    },
+    {
+        "level": "WARNING",
+        "message": "https:\/\/cdn.adsafeprotected.com\/sca.17.2.2.js 18 'webkitURL' is deprecated. Please use 'URL' instead.",
+        "source": "deprecation",
+        "timestamp": 1490451224236
+    },
+    {
+        "level": "WARNING",
+        "message": "https:\/\/cdn.adsafeprotected.com\/sca.17.2.2.js 18 'webkitOfflineAudioContext' is deprecated. Please use 'OfflineAudioContext' instead.",
+        "source": "deprecation",
+        "timestamp": 1490451224237
+    },
+    {
+        "level": "WARNING",
+        "message": "https:\/\/cdn.adsafeprotected.com\/sca.17.2.2.js 18 'webkitIDBCursor' is deprecated and will be removed in M57, around March 2017. Please use 'IDBCursor' instead. See https:\/\/www.chromestatus.com\/features\/5775330191081472 for more details.",
+        "source": "deprecation",
+        "timestamp": 1490451224247
+    },
+    {
+        "level": "WARNING",
+        "message": "https:\/\/cdn.adsafeprotected.com\/sca.17.2.2.js 18 'webkitIDBFactory' is deprecated and will be removed in M57, around March 2017. Please use 'IDBFactory' instead. See https:\/\/www.chromestatus.com\/features\/5775330191081472 for more details.",
+        "source": "deprecation",
+        "timestamp": 1490451224247
+    }
+]
