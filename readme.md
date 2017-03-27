@@ -22,7 +22,7 @@ Add the following to your environment file
  
 ```php
 SPEEDTEST_EMAIL=YOUR_EMAIL
-SPEEDTEST_PASSEORD=YOUR_PASSWORD
+SPEEDTEST_PASSWORD=YOUR_PASSWORD
 ```
  
 If these are added the logged in test will run and that way you can track your results.
