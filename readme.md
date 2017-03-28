@@ -44,7 +44,7 @@ This will create a table that the tests insert their results to.
 To run the tests it's pretty, use just the following:
 
 ```php
-php artisn dusk
+php artisan dusk
 ```
    
 ## Things removed
