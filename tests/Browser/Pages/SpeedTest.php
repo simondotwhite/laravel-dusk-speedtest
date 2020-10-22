@@ -27,20 +27,28 @@ class SpeedTest extends Page
         Log::info('Logged in SpeedTest Started');
 
         $browser->visit('https://beta.speedtest.net/results')
+
+            // Cookie notice
+            ->waitFor('#_evidon-banner-acceptbutton', 30)
+            ->press('#_evidon-banner-acceptbutton')
+
+            // Login
             ->waitFor('#login-link', 30)
             ->press('#login-link')
             ->type('#login-email', env('SPEEDTEST_EMAIL'))
             ->type('#login-password', env('SPEEDTEST_PASSWORD'))
             ->press('#login-button')
+
+            // Rest of the test
             ->waitFor('.start-text', 30)
             ->press('.start-text')
             ->waitfor('.download-speed', 300)
-            ->waitFor('.survey-label', 300)
+            ->waitFor('.result-container-meta', 300)
             ->screenshot('SpeedTest');
 
-        $sponsor = $browser->text('.sponsor-name');
-        $location = $browser->text('.location');
-        $ping = $browser->text('#ping-value');
+        $sponsor = $browser->text('.js-data-sponsor');
+        $location = $browser->text('.js-sponsor-name');
+        $ping = $browser->text('.ping-speed');
         $download = $browser->text('.download-speed');
         $upload = $browser->text('.upload-speed');
 

@@ -24,15 +24,22 @@ class SpeedTestNoLogin extends Page
         }
 
         \Log::info('SpeedTest Started');
-        
-        $browser->waitFor('.start-text', 30)
+
+
+        $browser
+            // Cookie notice
+            ->waitFor('#_evidon-banner-acceptbutton', 30)
+            ->press('#_evidon-banner-acceptbutton')
+
+            // Rest of the test
+            ->waitFor('.start-text', 30)
             ->press('.start-text')
-            ->waitFor('.survey-label', 300)
+            ->waitFor('.result-container-meta', 300)
             ->screenshot('SpeedTest');
 
-        $sponsor = $browser->text('.sponsor-name');
-        $location = $browser->text('.location');
-        $ping = $browser->text('#ping-value');
+        $sponsor = $browser->text('.js-data-sponsor');
+        $location = $browser->text('.js-sponsor-name');
+        $ping = $browser->text('.ping-speed');
         $download = $browser->text('.download-speed');
         $upload = $browser->text('.upload-speed');
 
